@@ -13,6 +13,15 @@ const config: Configuration = {
             template: 'src/public/index.html', 
         }),
     ],
+    module: {
+        rules: [
+            { 
+                test: /\.(ts|tsx)$/,
+                exclude: /node_modules/,
+                loader: "ts-loader" 
+            }
+        ]
+    },
     mode: 'development',
     devtool: 'inline-source-map',
     devServer: {
